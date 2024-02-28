@@ -26,9 +26,8 @@ int main() {
 
 	while (fgets(line, 100, input_f)){
 		sum+=convert(line);
-    
 	}
-	
+	printf ("sum of numbers: %i \n", sum);
 	fclose(input_f);
 		return 0;
 
