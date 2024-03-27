@@ -44,6 +44,17 @@ Sort::Sort(int counting, ...)
 	va_end(vl);
 }
 
+int convert(const char* str) {
+	int x = 0;
+	for (int i = 0; str[i] != '\0'; i++) {
+		char c = str[i];
+		if (c >= '0' && c <= '9') {
+			x = x * 10 + c - '0';
+		}
+	}
+	return x;
+}
+
 Sort::Sort(char* c)
 {
 	m_vector = new int[m_nr_elemente];
