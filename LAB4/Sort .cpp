@@ -46,7 +46,14 @@ Sort::Sort(int counting, ...)
 
 Sort::Sort(char* c)
 {
-	//parcurgem sirul si facem transformarile in numar
+	m_vector = new int[m_nr_elemente];
+	char* token = strtok(c, ",");
+	int i = 0;
+	while (token != NULL) {
+		m_vector[i] =convert(token);
+		i++;
+	}
+	
 }
 
 void Sort::InsertSort(bool ascendent)
