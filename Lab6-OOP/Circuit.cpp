@@ -53,7 +53,7 @@ void Circuit::ShowFinalRanks()
     for (int i = 0; i < carsNumber; ++i) {
         Car* currentCar = cars[i];
         int totalTime = lenght / currentCar->AverageSpeed(currentCar->speed, weather);
-        printf("Rank %d: Car %s completed the race in %d seconds.\n", i + 1, currentCar->GetName().c_str(), totalTime);
+        printf("Rank %d: Car %s completed the race in %d seconds.\n", i + 1, currentCar->GetName(), totalTime);
     }
 }
 
