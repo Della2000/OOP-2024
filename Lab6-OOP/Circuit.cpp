@@ -59,19 +59,11 @@ void Circuit::ShowFinalRanks()
 
 void Circuit::ShowWhoDidNotFinish()
 {
-    bool anyCarDidNotFinish = false; 
-
-    printf("%s ", "Cars that did not finish the race : ");
-    for (int i = 0; i < carsNumber; ++i) {
-        Car* currentCar = cars[i];
-        int totalTime = lenght / currentCar->AverageSpeed(currentCar->speed, weather);
-        if (totalTime > lenght) {
-            anyCarDidNotFinish = true;
-            printf("Car %s did not finish the race.\n", currentCar->GetName());
+    for (int i = 0; i < this->carsNumber; i++)
+        {
+       if ((cars[i]->consumption) * ((this->length) / 100) > cars[i]->capacity);
+                printf("Car %s, did not finish the race", this->cars[i]->GetName();
         }
-    }
-
-    if (!anyCarDidNotFinish) {
-        printf("%s ", "All cars finished the race successfully.");
+        printf("\n");
     }
 }
