@@ -10,6 +10,7 @@ protected:
 	int consumption;
 public:
 	int speed;
+        Car(){}
 	Car(int fuelcapacity, int fuelconsumption) {
 		this->capacity = fuelcapacity;
 		this->consumption = fuelconsumption;
