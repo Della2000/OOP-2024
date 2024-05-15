@@ -14,16 +14,6 @@ private:
     int capacity;
     int size;
 
-    void resize() {
-        capacity *= 2;
-        Pair* newData = new Pair[capacity];
-        for (int i = 0; i < size; ++i) {
-            newData[i] = data[i];
-        }
-        delete[] data;
-        data = newData;
-    }
-
 public:
     Map() : capacity(10), size(0) {
         data = new Pair[capacity];
@@ -39,9 +29,6 @@ public:
                 return data[i].value;
             }
         }
-        if (size == capacity) {
-            resize();
-        }
         data[size].key = key;
         data[size].value = V();
         return data[size++].value;
@@ -53,9 +40,6 @@ public:
                 data[i].value = value;
                 return;
             }
-        }
-        if (size == capacity) {
-            resize();
         }
         data[size].key = key;
         data[size].value = value;
